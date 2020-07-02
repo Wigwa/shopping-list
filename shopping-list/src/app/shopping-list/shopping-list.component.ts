@@ -18,12 +18,30 @@ shoppinglist:Shoppinglist[] = [
   new Shoppinglist ('Wheat Flour(Pembe)', '1Bundle', 'Ksh.1200', new Date(2020,7,2))
 ];
 
+seeDetail(index) {
+  this.shoppinglist[index].viewDetails = !this.shoppinglist
+  [index].viewDetails;
+  purgeShoppinglist(isComplete, index);{
+    if (isComplete) {
+      let toDelete = confirm('Are you sure you want to delete this shoppinglist');
+      if (toDelete) {
+        this.shoppinglist.splice(index, 1);
+
+      }
+
+    }
+    }
+  }
+  addNewShoppinglist(luc) {
+    luc.elapse = new Date(luc.elapse)
+    this.shoppinglist.push(luc);
+
+  }
 
   
 
-  constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(){
   }
 
 }
