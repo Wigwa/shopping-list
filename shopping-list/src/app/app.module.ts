@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { Shoppinglist } from './shoppinglist.details/shoppinglist.details.component';
 import { ShoppinglistDetailComponent } from './shoppinglist-detail/shoppinglist-detail.component';
+import { ShoppinglistFormComponent } from './shoppinglist-form/shoppinglist-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ShoppingListComponent,
     Shoppinglist.DetailsComponent,
-    ShoppinglistDetailComponent
+    ShoppinglistDetailComponent,
+    ShoppinglistFormComponent
   ],
   imports: [
     BrowserModule,
