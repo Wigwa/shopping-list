@@ -8,6 +8,7 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppinglistDetailComponent } from './shoppinglist-detail/shoppinglist-detail.component';
 import { ShoppinglistFormComponent } from './shoppinglist-form/shoppinglist-form.component';
 import { DateCountPipe } from './date-count.pipe';
+import { StrikethroughDirective } from './strikethrough.directive';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { DateCountPipe } from './date-count.pipe';
     ShoppingListComponent,
     ShoppinglistDetailComponent,
     ShoppinglistFormComponent,
-    DateCountPipe
+    DateCountPipe,
+    StrikethroughDirective
   ],
   imports: [
     BrowserModule,
