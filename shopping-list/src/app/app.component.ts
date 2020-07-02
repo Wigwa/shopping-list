@@ -7,9 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
  title = "shopping list";
- shopping:string[];
-
- constructor(){
-   this.shopping = ['fruits', 'cloths','snaks']
- }
 }
