@@ -1,4 +1,16 @@
-<span class="ml-2">{{shoppinglist.elapse|dateCount}}</span>
-<span id="delete" (click)= 'shoppinglistLuc(true)'><i class="far fa-trash-alt fa-2x text-danger float-right"></i></span>
+<div class="row">
+    <div id="col1" class="col-md-6 col-sm-12">
+        <div class="card mt-3" *ngFor='let shoppinglist of shopinglists;let i = index'>
+            <div class="card-header text-center bg-primary text-white">Item: {{shoppinglist.item}}</div>
+        </div>
+    </div>
+</div>
+<div class="card-footer">
+    <button class="btn btn-sm btn-outline-primary mr-4" (click)='seeDetails(i)'>View</button>
+    <app-shoppinglist-detail *ngIf='shoppinglist.viewDetails' [shoppinglist]='shoppinglist'
+        (isDone)='purgeShoppingList($event,i)'></app-shoppinglist-detail>
+</div>
 
-
+<div id="col2" class="col-md-6">
+    <app-shoppinglist-form (addQuote)="addNewQuotes($event)" ></app-shoppinglist-form>
+</div>
