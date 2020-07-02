@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Shoppinglist } from '../shoppinglist';
 
 @Component({
   selector: 'app-shoppinglist-detail',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShoppinglistDetailComponent implements OnInit {
 
+  @Input() shoppinglist: Shoppinglist;
+  @Output() isDone  = new EventEmitter<boolean>();
+
+  shoppinglistDan(purge: boolean){
+    this.isDone.emit(purge);
+  }
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
 }
