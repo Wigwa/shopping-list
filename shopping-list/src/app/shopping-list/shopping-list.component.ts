@@ -40,8 +40,4 @@ addNewShoppinglist(luc) {
 }
 
 
-
-
-
-
 }

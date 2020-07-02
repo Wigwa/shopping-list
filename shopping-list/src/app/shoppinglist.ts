@@ -4,7 +4,7 @@ export class Shoppinglist {
         public item: string, 
         public quantity: string,
         public aproximateprice: string,
-        public elapse: Date
+        public elapse: Date,
     ) {
         this.viewDetails = false;
     }
