@@ -21,8 +21,8 @@ shoppinglist:Shoppinglist[] = [
 seeDetail(index) {
   this.shoppinglist[index].viewDetails = !this.shoppinglist
   [index].viewDetails;
-  purgeShoppinglist(isComplete, index);{
-    if (isComplete) {
+  purgeShoppinglist(isDone, index);{
+    if (isDone) {
       let toDelete = confirm('Are you sure you want to delete this shoppinglist');
       if (toDelete) {
         this.shoppinglist.splice(index, 1);
