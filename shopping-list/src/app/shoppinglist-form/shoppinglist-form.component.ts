@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Shoppinglist } from '../shoppinglist';
 
 @Component({
   selector: 'app-shoppinglist-form',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./shoppinglist-form.component.css']
 })
 export class ShoppinglistFormComponent implements OnInit {
+  newShoppinglist = new Shoppinglist('', '', '', new Date());
+
+  @Output() addShoppinglist = new EventEmitter<Shoppinglist>();
+  submitShoppinglist() {
+    this.addShoppinglist.emit(this.newShoppinglist);
+  }
+
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
 }
