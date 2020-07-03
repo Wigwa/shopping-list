@@ -1,0 +1,47 @@
+.navbar {
+    width: 100%;
+    background-color: grey;
+    overflow: auto;
+    height: 100px;
+  }
+  
+  .navbar a {
+    float: left;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .navbar a:hover {
+    background-color: green;
+  }
+  
+  .active {
+    background-color: purple;
+  }
+
+  .image{
+      text-align: center;
+      color: aqua;
+      background-image: url('https://images.pexels.com/photos/264636/pexels-photo-264636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+    
+      
+      background-size: 1500px 500px;
+      height: 550px;
+      background-repeat: no-repeat;
+      padding-top: 50px;
+      font-size: xx-large;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+
+   #block{
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); 
+  background: rgba(0, 0, 0, 0.5); 
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}

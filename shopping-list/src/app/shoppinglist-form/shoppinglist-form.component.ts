@@ -7,6 +7,8 @@ import { Shoppinglist } from '../shoppinglist';
   styleUrls: ['./shoppinglist-form.component.css']
 })
 export class ShoppinglistFormComponent implements OnInit {
+
+  shoppinglist:Shoppinglist[];
   newShoppinglist = new Shoppinglist('', '', '', new Date());
 
   @Output() addShoppinglist = new EventEmitter<Shoppinglist>();
@@ -21,3 +23,8 @@ export class ShoppinglistFormComponent implements OnInit {
   }
 
 }
+
+
+
+
+

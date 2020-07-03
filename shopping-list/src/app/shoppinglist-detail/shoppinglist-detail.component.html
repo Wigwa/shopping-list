@@ -1,2 +1,24 @@
-<span class="ml-2">{{shoppinglist.elapse|dateCount}}</span>
-<span id="delete" (click)= 'quoteDan(true)'><i class="far fa-trash-alt fa-2x text-danger float-right"><img src="https://img.icons8.com/flat_round/64/000000/delete-sign.png"/></i></span>
+<!-- 
+<span class="ml-5">{{ shoppinglist.quantity }}</span>
+<span class="ml-5">Price  {{ shoppinglist.aproximateprice }}</span> -->
+<span id="delete" (click)= 'shoppinglistDan(true)'><i class="far fa-trash-alt fa-2x text-danger float-right"><img src="https://img.icons8.com/flat_round/64/000000/delete-sign.png" height="20px" width="20px"/>Remove</i></span>
+
+<div id="shop">
+<h2>My ShoppingList</h2><hr>
+
+<table style="width:100%">
+  <tr>
+    <th>Item</th>
+    <th>Quantity</th> 
+    <th>Price</th>
+  </tr>
+  <tr>
+    <td>{{ shoppinglist.item }}</td>
+    <td>{{ shoppinglist.quantity }}</td>
+    <td>{{ shoppinglist.aproximateprice }}</td>
+  </tr><hr>
+  <span class="ml-2">{{shoppinglist.elapse|dateCount}}</span>
+  
+</table>
+</div>
+
